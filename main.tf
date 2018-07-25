@@ -105,7 +105,7 @@ resource "aws_instance" "jenkins" {
       "sudo /usr/local/bin/pip install argparse cheetah oauth PrettyTable pyserial ansible",
       "sudo ln -s /usr/local/bin/pip /usr/bin/pip",
       "sudo ln -s /usr/local/bin/ansible /usr/bin/ansible",
-      "sudo yum update",
+      "sudo yum -y update",
       "echo \"JENKINS INITIAL ADMIN PASSWORD =\" `docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword`"
     ]
   }
